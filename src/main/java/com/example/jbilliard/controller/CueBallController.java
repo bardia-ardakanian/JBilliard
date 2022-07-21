@@ -8,7 +8,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 
 /**
- * @AUTHOR = Kimia
+ * @AUTHOR = Bardia
  * @VERSION = 1.0
  *
  *  This class is the controller for the CueBall.

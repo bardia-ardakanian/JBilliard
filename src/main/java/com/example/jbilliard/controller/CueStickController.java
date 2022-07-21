@@ -9,7 +9,7 @@ import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 
 /**
- * @AUTHOR = Kimia
+ * @AUTHOR = Bardia
  * @VERSION = 1.0
  *
  *  This class is the controller for the CueStick.

@@ -15,7 +15,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 
 /**
- * @AUTHOR = Kimia
+ * @AUTHOR = Bardia
  * @VERSION = 1.0
  *
  *  The "manager" that is in charge of changing scenes within the program.

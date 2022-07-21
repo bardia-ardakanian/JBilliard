@@ -8,7 +8,7 @@ import com.example.jbilliard.GameManager;
 import javafx.animation.AnimationTimer;
 
 /**
- * @AUTHOR = Kimia
+ * @AUTHOR = Bardia
  * @VERSION = 1.0
  *
  * Model class that runs the game play. Brings together a PoolBoard and Players Updates status of the game at each step of play.

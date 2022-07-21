@@ -6,7 +6,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
 /**
- * @AUTHOR = Kimia
+ * @AUTHOR = Bardia
  * @VERSION = 1.0
  *
  *  View class for a pocket.

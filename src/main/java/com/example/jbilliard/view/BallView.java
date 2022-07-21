@@ -10,7 +10,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Shape;
 
 /**
- * @AUTHOR = Kimia
+ * @AUTHOR = Bardia
  * @VERSION = 1.0
  *
  *  View class for the ball.

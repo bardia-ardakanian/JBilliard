@@ -7,7 +7,7 @@ import java.util.Observable;
 import com.example.jbilliard.GameConstants;
 
 /**
- * @AUTHOR = Kimia
+ * @AUTHOR = Bardia
  * @VERSION = 1.0
  *
  * Model class for a pool board, including interactions between the pool balls, cues tick, and pockets.

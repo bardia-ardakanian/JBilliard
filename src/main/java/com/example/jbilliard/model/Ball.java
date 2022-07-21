@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Observable;
 
 /**
- * @AUTHOR = Kimia
+ * @AUTHOR = Bardia
  * @VERSION = 1.0
  *
  * Model class for a pool ball.

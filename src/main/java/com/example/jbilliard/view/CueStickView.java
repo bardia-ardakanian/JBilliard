@@ -9,7 +9,7 @@ import javafx.scene.shape.Line;
 import javafx.scene.shape.Shape;
 
 /**
- * @AUTHOR = Kimia
+ * @AUTHOR = Bardia
  * @VERSION = 1.0
  *
  *  View class for the CueStick.

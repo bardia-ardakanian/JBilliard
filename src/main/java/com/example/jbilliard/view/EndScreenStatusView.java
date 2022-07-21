@@ -7,7 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.text.Text;
 
 /**
- * @AUTHOR = Kimia
+ * @AUTHOR = Bardia
  * @VERSION = 1.0
  *
  *  View class for EndScreen.

@@ -3,7 +3,7 @@ package com.example.jbilliard.model;
 import java.util.Observable;
 
 /**
- * @AUTHOR = Kimia
+ * @AUTHOR = Bardia
  * @VERSION = 1.0
  *
  *  Model class the sets the status for the EndScreen to pass on to the observing view.

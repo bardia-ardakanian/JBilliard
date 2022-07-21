@@ -3,7 +3,7 @@ package com.example.jbilliard.model;
 import com.example.jbilliard.GameConstants;
 
 /**
- * @AUTHOR = Kimia
+ * @AUTHOR = Bardia
  * @VERSION = 1.0
  *
  *  Model class for a pocket.

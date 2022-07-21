@@ -6,7 +6,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 /**
- * @AUTHOR = Kimia
+ * @AUTHOR = Bardia
  * @VERSION = 1.0
  *
  *  Game luncher

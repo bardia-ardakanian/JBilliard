@@ -1,7 +1,7 @@
 package com.example.jbilliard.model;
 
 /**
- * @AUTHOR = Kimia
+ * @AUTHOR = Bardia
  * @VERSION = 1.0
  *
  *  Ball color enum.

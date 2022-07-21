@@ -3,7 +3,7 @@ package com.example.jbilliard.model;
 import java.util.Observable;
 
 /**
- * @AUTHOR = Kimia
+ * @AUTHOR = Bardia
  * @VERSION = 1.0
  *
  * Model class that stores the status of the pool game after each turn.
