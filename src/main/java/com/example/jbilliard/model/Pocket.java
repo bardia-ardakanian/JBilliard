@@ -2,6 +2,8 @@ package com.example.jbilliard.model;
 
 import com.example.jbilliard.GameConstants;
 
+import java.io.Serializable;
+
 /**
  * @AUTHOR = Bardia
  * @VERSION = 1.0
@@ -9,7 +11,7 @@ import com.example.jbilliard.GameConstants;
  *  Model class for a pocket.
  */
 
-public class Pocket {
+public class Pocket implements Serializable  {
 	
 	private double xPosition;
 	private double yPosition;

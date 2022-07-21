@@ -1,5 +1,6 @@
 package com.example.jbilliard.model;
 
+import java.io.Serializable;
 import java.util.Observable;
 
 /**
@@ -9,7 +10,7 @@ import java.util.Observable;
  *  Model class for a cue stick.
  */
 
-public class CueStick extends Observable {
+public class CueStick extends Observable implements Serializable {
 	
 	private double startX;
 	private double startY;

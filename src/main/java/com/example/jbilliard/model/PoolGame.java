@@ -1,5 +1,6 @@
 package com.example.jbilliard.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
@@ -13,7 +14,7 @@ import javafx.animation.AnimationTimer;
  *
  * Model class that runs the game play. Brings together a PoolBoard and Players Updates status of the game at each step of play.
  */
-public class PoolGame implements Observer {
+public class PoolGame implements Observer, Serializable {
 	private final GameManager gameManager = GameManager.getInstance();
 	private final PoolBoard poolBoard = new PoolBoard();
 	private final Player[] players = {new Player(), new Player()};

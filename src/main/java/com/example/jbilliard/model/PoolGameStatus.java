@@ -1,5 +1,6 @@
 package com.example.jbilliard.model;
 
+import java.io.Serializable;
 import java.util.Observable;
 
 /**
@@ -8,7 +9,7 @@ import java.util.Observable;
  *
  * Model class that stores the status of the pool game after each turn.
  */
-public class PoolGameStatus extends Observable {
+public class PoolGameStatus extends Observable implements Serializable {
 	private String player1PointsStatus = "0";
 	private String player2PointsStatus = "0";
     private String player1BallColorStatus = "N/A";

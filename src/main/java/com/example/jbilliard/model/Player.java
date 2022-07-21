@@ -1,5 +1,7 @@
 package com.example.jbilliard.model;
 
+import java.io.Serializable;
+
 /**
  * @AUTHOR = Bardia
  * @VERSION = 1.0
@@ -7,7 +9,7 @@ package com.example.jbilliard.model;
  *  Model class for a player. Stores the player's ball type and points.
  */
 
-public class Player {
+public class Player implements Serializable {
 	 
 	int ballType;
 	int points = 0;

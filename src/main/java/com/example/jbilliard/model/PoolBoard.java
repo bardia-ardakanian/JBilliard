@@ -1,6 +1,8 @@
 package com.example.jbilliard.model;
 
 import static java.lang.Math.sqrt;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Observable;
@@ -13,7 +15,7 @@ import com.example.jbilliard.GameConstants;
  * Model class for a pool board, including interactions between the pool balls, cues tick, and pockets.
  */
 
-public class PoolBoard extends Observable {
+public class PoolBoard extends Observable implements Serializable {
 
 	private final Ball[] balls = new Ball[16];
 	private ArrayList<Ball> pocketedBalls = new ArrayList<>();

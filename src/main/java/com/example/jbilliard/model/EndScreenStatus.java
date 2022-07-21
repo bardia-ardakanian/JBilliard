@@ -1,5 +1,6 @@
 package com.example.jbilliard.model;
 
+import java.io.Serializable;
 import java.util.Observable;
 
 /**
@@ -9,7 +10,7 @@ import java.util.Observable;
  *  Model class the sets the status for the EndScreen to pass on to the observing view.
  */
 
-public class EndScreenStatus extends Observable{
+public class EndScreenStatus extends Observable implements Serializable {
 
 	private String gameOverMessage;
 	
