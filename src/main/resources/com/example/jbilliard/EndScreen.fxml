@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="730.0" maxWidth="1280.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jbilliard.view.EndScreenStatusView">
+   <children>
+      <Text layoutX="379.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Over!">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Text>
+      <Text fx:id="gameOverText" layoutX="373.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" " wrappingWidth="534.6829261779785">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

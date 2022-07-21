@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="720.0" maxWidth="1280.0" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jbilliard.view.PoolGameStatusView">
+   <children>
+      <Pane prefHeight="720.0" prefWidth="250.0" style="-fx-background-color: #d3d3d3;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a1a1a1" height="178.0" layoutX="16.0" layoutY="32.0" stroke="BLACK" strokeType="INSIDE" width="210.0" />
+            <Text fx:id="player1BallColorText" layoutX="31.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ball color: N/A" textAlignment="CENTER" wrappingWidth="68.76564025878906" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7b3b3" height="212.0" layoutX="20.0" layoutY="263.0" stroke="BLACK" strokeType="INSIDE" width="210.0" />
+            <Text fx:id="lastTurnText" layoutX="23.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Click and drag the cue stick to take a shot at the cue ball." textAlignment="CENTER" wrappingWidth="203.03045654296875">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Text>
+            <Pane layoutY="437.0" prefHeight="283.0" prefWidth="250.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a1a1a1" height="42.0" layoutX="3.0" layoutY="69.0" stroke="BLACK" strokeType="INSIDE" width="244.0" />
+                  <Text fx:id="turnText" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 1, your turn!" textAlignment="CENTER" wrappingWidth="250.0">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="cueBallText" layoutX="10.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="230.99998474121094">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+               </children></Pane>
+            <Text layoutX="32.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="148.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="player1PointsText" layoutX="55.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text fx:id="player2PointsText" layoutX="171.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text fx:id="player2BallColorText" layoutX="147.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ball color: N/A" textAlignment="CENTER" wrappingWidth="68.76564025878906" />
+            <Text fx:id="playerTurnText1" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pocketed Balls" textAlignment="CENTER" wrappingWidth="250.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+         </children></Pane>
+      <Pane prefHeight="720.0" prefWidth="1030.0" />
+   </children>
+</HBox>

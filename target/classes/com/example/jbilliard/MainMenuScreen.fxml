@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="720.0" maxWidth="1280.0" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jbilliard.controller.MainMenuController">
+   <children>
+<!--      <ImageView fitHeight="482.0" fitWidth="910.0" layoutX="195.0" layoutY="119.0">-->
+<!--         <image>-->
+<!--            <Image url="@texture/blurryTable.png" />-->
+<!--         </image>-->
+<!--      </ImageView>-->
+      <Button fx:id="btn_Go" layoutX="552.0" layoutY="413.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="101.0" prefWidth="197.0" style="-fx-background-color: #d3d3d3;" text="Play" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="435.0" layoutY="153.0" prefHeight="220.0" prefWidth="431.0" text="Cool Pool" wrapText="true">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
