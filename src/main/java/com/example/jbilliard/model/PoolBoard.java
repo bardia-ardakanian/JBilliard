@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Observable;
 import com.example.jbilliard.GameConstants;
+import javafx.scene.paint.Color;
 
 /**
  * @AUTHOR = Bardia
@@ -17,7 +18,7 @@ import com.example.jbilliard.GameConstants;
 
 public class PoolBoard extends Observable implements Serializable {
 
-	private final Ball[] balls = new Ball[16];
+	private final Ball[] balls = new Ball[11];
 	private ArrayList<Ball> pocketedBalls = new ArrayList<>();
 	private final ArrayList<Ball> remainingBalls = new ArrayList<>();
 	private final Pocket[] pockets = new Pocket[6];
@@ -37,17 +38,36 @@ public class PoolBoard extends Observable implements Serializable {
 		}
 
 		setUpBalls();
-		cueStick = new CueStick(balls[15]);
+		cueStick = new CueStick(balls[balls.length-1]);
 
 		this.collisionCount = 0;
 	}
 
 	private void setUpBalls() {
-		for (int k = 0; k < balls.length; k ++) {
-			if (k < 7) { balls[k] = new Ball(0); }
-			else if (k < 14) { balls[k] = new Ball(1); }
-			else if (k == 14) { balls[k] = new Ball(3); }
-			else { balls[k] = new Ball(2); }
+		Color[] colors = {
+				BallColor.RED,
+				BallColor.BLUE,
+				BallColor.GREEN,
+				BallColor.YELLOW,
+				BallColor.ORANGE,
+				BallColor.AQUA,
+				BallColor.PINK,
+				BallColor.GRAY,
+				BallColor.YELLOWGREEN,
+				BallColor.WHITE,
+				BallColor.BLACK
+		};
+
+		for (int k = 0; k < balls.length; k++) {
+			if (k == 10) { // WHITE
+				balls[k] = new Ball(2, colors[9], -1);
+			}
+			else if (k == 9) { // BLACK
+				balls[k] = new Ball(3, colors[10], 9);
+			}
+			else { // COLORED
+				balls[k] = new Ball(1, colors[k], k);
+			}
 		}
 
 		rackBalls(balls);
@@ -60,23 +80,23 @@ public class PoolBoard extends Observable implements Serializable {
 		double radius = 1.125;
 		double threeQuartersLength = 0.75 * length + boardX;
 
+		// 0
 		balls[0].setCenter(threeQuartersLength, centerY);
+		// 1
 		balls[1].setCenter(threeQuartersLength + 1 * incrementX, centerY + radius);
-		balls[2].setCenter(threeQuartersLength + 2 * incrementX, centerY - 2 * radius);
-		balls[3].setCenter(threeQuartersLength + 3 * incrementX, centerY + 3 * radius);
-		balls[4].setCenter(threeQuartersLength + 3 * incrementX, centerY - radius);
-		balls[5].setCenter(threeQuartersLength + 4 * incrementX, centerY + 2 * radius);
-		balls[6].setCenter(threeQuartersLength + 4 * incrementX, centerY - 4 * radius);
-		balls[7].setCenter(threeQuartersLength + 1 * incrementX, centerY - radius);
-		balls[8].setCenter(threeQuartersLength + 2 * incrementX, centerY + 2 * radius);
-		balls[9].setCenter(threeQuartersLength + 3 * incrementX, centerY + radius);
-		balls[10].setCenter(threeQuartersLength + 3 * incrementX, centerY - 3 * radius);
-		balls[11].setCenter(threeQuartersLength + 4 * incrementX, centerY + 4 * radius);
-		balls[12].setCenter(threeQuartersLength + 4 * incrementX, centerY);
-		balls[13].setCenter(threeQuartersLength + 4 * incrementX, centerY - 2 * radius);
-		balls[14].setCenter(threeQuartersLength + 2 * incrementX, centerY);
-
-		balls[15].setCenter(length * 1/4 + boardX, width / 2 + boardY);
+		balls[2].setCenter(threeQuartersLength + 1 * incrementX, centerY - radius);
+		// 2
+		balls[3].setCenter(threeQuartersLength + 2 * incrementX, centerY - 2 * radius);
+		// BLACK
+		balls[9].setCenter(threeQuartersLength + 2 * incrementX, centerY);
+		balls[5].setCenter(threeQuartersLength + 2 * incrementX, centerY + 2 * radius);
+		// 3
+		balls[6].setCenter(threeQuartersLength + 3 * incrementX, centerY + 3 * radius);
+		balls[7].setCenter(threeQuartersLength + 3 * incrementX, centerY - radius);
+		balls[8].setCenter(threeQuartersLength + 3 * incrementX, centerY + radius);
+		balls[4].setCenter(threeQuartersLength + 3 * incrementX, centerY - 3 * radius);
+		// WHITE
+		balls[10].setCenter(length * 1/4 + boardX, width / 2 + boardY);
 		collisionCount = 0;
 	}
 
@@ -104,10 +124,10 @@ public class PoolBoard extends Observable implements Serializable {
 	}
 
 	public void resetCueBall() {
-		pocketedBalls.remove(balls[15]);
-		remainingBalls.add(balls[15]);
-		balls[15].unPocket();
-		balls[15].setCenter(length * 0.25 + boardX, width / 2 + boardY);
+		pocketedBalls.remove(balls[balls.length-1]);
+		remainingBalls.add(balls[balls.length-1]);
+		balls[balls.length-1].unPocket();
+		balls[balls.length-1].setCenter(length * 0.25 + boardX, width / 2 + boardY);
 		resetCue = true;
 
 		setChanged();

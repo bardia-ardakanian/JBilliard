@@ -20,7 +20,7 @@ public class CueBallController {
 	private double mouseY;
 	public void addMousePressedEventHandler(PoolBoardView pbv, Ball cueBall) {
 		Rectangle r = pbv.getScratchRectangle();
-		Circle c = (Circle) pbv.getBallViews()[15].getCircle();
+		Circle c = (Circle) pbv.getBallViews()[pbv.getBallViews().length-1].getCircle();
 		c.setOnMouseClicked(lambda -> {
 			boolean isNotOverlapping = true;
 

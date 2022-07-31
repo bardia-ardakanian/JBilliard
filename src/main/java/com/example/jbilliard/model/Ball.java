@@ -1,5 +1,6 @@
 package com.example.jbilliard.model;
 
+import javafx.scene.paint.Color;
 import java.io.Serializable;
 import java.util.Observable;
 
@@ -10,8 +11,7 @@ import java.util.Observable;
  * Model class for a pool ball.
  *
  * colors: {
- *     RED,
- *     BLUE,
+ *     COLOR,
  *     WHITE,
  *     BLACK,
  * }
@@ -23,23 +23,29 @@ public class Ball extends Observable implements Serializable {
 	private double xVelocity;
 	private double yVelocity;
 	private boolean isPocketed;
+	private final Color color;
+	private final int point;
 
-	public Ball(int id) {
+	public Ball(int id, Color color, int point) {
 		this.centerX = 0;
 		this.centerY = 0;
 		this.xVelocity = 0;
 		this.yVelocity = 0;
 		this.id = id;
 		this.isPocketed = false;
+		this.color = color;
+		this.point = point;
 	}
 
-	public Ball(int id, double centerX, double centerY) {
+	public Ball(int id, double centerX, double centerY, Color color, int point) {
 		this.id = id;
 		this.centerX = centerX;
 		this.centerY = centerY;
 		this.xVelocity = 0;
 		this.yVelocity = 0;
 		this.isPocketed = false;
+		this.color = color;
+		this.point = point;
 	}
 	
 	public void unPocket() {
@@ -100,4 +106,10 @@ public class Ball extends Observable implements Serializable {
 	public double getXVelocity() { return xVelocity; }
 	public double getYVelocity() { return yVelocity; }
 	public boolean isPocketed() { return isPocketed; }
+	public Color getColor() {
+		return color;
+	}
+	public int getPoint() {
+		return point;
+	}
 }

@@ -5,9 +5,12 @@ import java.util.Observer;
 import com.example.jbilliard.GameConstants;
 import com.example.jbilliard.model.Ball;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Shape;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextBoundsType;
 
 /**
  * @AUTHOR = Bardia
@@ -36,15 +39,7 @@ public class BallView implements Observer {
 		double radius = radius_inches * GameConstants.IN_TO_PIXEL;
 
 		circle = new Circle(centerX, centerY, radius);
-
-        switch (id) {
-            case 0 -> circle.setFill(Color.RED);
-            case 1 -> circle.setFill(Color.BLUE);
-            case 2 -> circle.setFill(Color.WHITE);
-            case 3 -> circle.setFill(Color.BLACK);
-            default -> {
-            }
-        }
+		circle.setFill(ball.getColor());
 	}
 
 	public void setCenterX() { 

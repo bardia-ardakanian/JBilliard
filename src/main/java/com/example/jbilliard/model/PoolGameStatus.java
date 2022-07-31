@@ -32,16 +32,10 @@ public class PoolGameStatus extends Observable implements Serializable {
     }
     
     public void setBallColors(int currPlayerInd, int player1ID) {
-    	if ((player1ID + currPlayerInd)%2 == 0 ) {
-    		player1BallColorStatus = "Ball color: RED";
-    		player2BallColorStatus = "Ball color: BLUE";
-    	}
-    	else{
-    		player1BallColorStatus = "Ball color: BLUE";
-    		player2BallColorStatus = "Ball color: RED";
-    	}
-    	
-    	setChanged();
+		player1BallColorStatus = "";
+		player2BallColorStatus = "";
+
+		setChanged();
     	notifyObservers();
     }
     

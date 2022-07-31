@@ -84,7 +84,7 @@ public class PoolBoardView implements Observer {
 	public void update(Observable o, Object arg) {
 		if (o == poolBoard) {
 			if (poolBoard.getResetCue()) {
-				view.getChildren().add(ballViews[15].getCircle());
+				view.getChildren().add(ballViews[ballViews.length-1].getCircle());
 				initCueBallController();
 			}
 		}
@@ -92,9 +92,9 @@ public class PoolBoardView implements Observer {
 	
 	public void initElements() {
 		Ball[] balls = poolBoard.getBalls();
-		ballViews = new BallView[16];
+		ballViews = new BallView[11];
 
-		for (int i = 0; i < 16; i ++) {
+		for (int i = 0; i < ballViews.length; i ++) {
 			ballViews[i] = new BallView(balls[i]);
 			balls[i].addObserver(ballViews[i]);
 			this.getPane().getChildren().add(ballViews[i].getCircle());
@@ -124,9 +124,9 @@ public class PoolBoardView implements Observer {
 	public void initCueBallController(){
 		CueBallController cueBallController = new CueBallController();
 		cueBallController.addMouseHoverEventHandler(this, 
-				poolBoard.getBalls()[15]);
+				poolBoard.getBalls()[ballViews.length-1]);
 		cueBallController.addMousePressedEventHandler(this, 
-				poolBoard.getBalls()[15]);
+				poolBoard.getBalls()[ballViews.length-1]);
 	}
 
 	public void setCueStickHandlers() {
